@@ -313,12 +313,9 @@ end
 	updatePlacement - The main loop that runs every frame during placement
 
 	This is connected to RenderStepped so it runs every frame (60+ times per second)
-	Each frame it:
-	1. Raycasts to find where mouse is pointing
-	2. Snaps that position to grid
-	3. Moves preview there
-	4. Checks for collisions
-	5. Updates preview color
+	Each frame it raycasts to find where mouse is pointing, snaps that position
+	to the grid, moves the preview there, then checks for collisions and updates
+	the preview color based on whether placement is valid or blocked
 ]]
 local function updatePlacement()
 	-- Early exit if were not in placement mode
